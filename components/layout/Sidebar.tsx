@@ -9,42 +9,46 @@ import SidebarLogo from "./SidebarLogo";
 import SidebarTweetButton from "./SidebarTweetButton";
 
 const Sidebar: React.FC = () => {
-  const items = [
-    {
-      label: "Home",
-      href: "/",
-      icon: BsHouseFill,
-    },
-    {
-      label: "Notificaciones",
-      href: "/notifications",
-      icon: BsBellFill,
-    },
-    {
-      label: "Profile",
-      href: "/users/123",
-      icon: FaUser,
-    },
-  ];
-  return (
-    <div className="col-span-1 h-full pr-4 md:pr-6">
-      <div className="flex flex-col items-end">
-        <div className="space-y-2 lg:w-[230px]">
-          <SidebarLogo />
-          {items.map((item, index) => (
-            <SidebarItem
-              key={index}
-              label={item.label}
-              href={item.href}
-              icon={item.icon}
-            />
-          ))}
-          <SidebarItem onClick={() => {}} icon={BiLogOut} label="Logout"  />
-          <SidebarTweetButton />
-        </div>
-      </div>
-    </div>
-  );
+	const items = [
+		{
+			label: "Home",
+			href: "/",
+			icon: BsHouseFill
+		},
+		{
+			label: "Notificaciones",
+			href: "/notifications",
+			icon: BsBellFill
+		},
+		{
+			label: "Profile",
+			href: "/users/123",
+			icon: FaUser
+		}
+	];
+	return (
+		<div className="col-span-1 h-full pr-4 md:pr-6">
+			<div className="flex flex-col items-end">
+				<div className="space-y-2 lg:w-[230px]">
+					<SidebarLogo />
+					{items.map((item, index) => (
+						<SidebarItem
+							key={index}
+							label={item.label}
+							href={item.href}
+							icon={item.icon}
+						/>
+					))}
+					<SidebarItem
+						onClick={() => {}}
+						icon={BiLogOut}
+						label="Logout"
+					/>
+					<SidebarTweetButton />
+				</div>
+			</div>
+		</div>
+	);
 };
 
 export default Sidebar;

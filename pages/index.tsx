@@ -1,9 +1,9 @@
 import Header from "../components/Header";
 
 export default function Home() {
-  return (
-    <>
-      <Header label="Home" showBackArrow />
-    </>
-  );
+	return (
+		<>
+			<Header label="Home" showBackArrow />
+		</>
+	);
 }
